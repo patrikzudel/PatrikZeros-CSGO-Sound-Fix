@@ -35,7 +35,7 @@ It is **VAC safe** because it uses game state integration and it only changes th
 
   I am no expert but I suspect this is due to a build up of small periods of very high volume *(Shooting, Flashes, Grenades, Bomb explosion, Dinks)*. 
 
-**When you spectate your teammates you get a multiple of the sound exposure you would normally get because on average you are going to have one duel and die, after that you don't need your full listening volume. **
+**When you spectate your teammates you get a multiple of the sound exposure you would normally get because on average you are going to have one duel and die, after that you don't need your full listening volume.**
 My limited testing so far showed that lowering volume after death can lower exposure by 50% even if you live most of the round because most of the fighting and loud noises happen late round. *(Pro play)*
 
 
