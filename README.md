@@ -42,3 +42,8 @@
 
   - pip install pyinstaller
   - pyinstaller --onefile --noconsole --icon Icon.ico --name "PatrikZeros CSGO Sound Fix" main.py
+
+## Sources
+
+- In sources.txt
+- Thanks to mdhedelund, Simon Brunning and Mark Hammond.
