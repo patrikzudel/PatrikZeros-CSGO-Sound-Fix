@@ -36,7 +36,7 @@
   Its simple, it lowers the volume when it detects a death and returns the volume when you get to freezetime. 
   This effectively means your volume will be low for everything (e.g. Deathmatch) except actual matches (competitive / casual) where there is freezetime.
 
-It is **VAC safe** because it uses game state integration and it only changes the Windows sound mixer settings for CS. So it doesn't touch the game at all.
+It is **VAC safe** because it uses game state integration and it only changes the Windows sound mixer settings for CS. So it doesn't touch the game at all. Game state integration is the same thing Steelseries for example uses for their mice to change color when you kill someone etc.
 
   ## To be added
 
