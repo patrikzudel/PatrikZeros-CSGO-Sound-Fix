@@ -1,6 +1,8 @@
 # PatrikZero's CS:GO Volume Fix
 
- Script that lowers volume when you die and get flashed in CS:GO. Uses game state integration. Anti-cheat safe.
+Script that lowers volume when you die and get flashed in CS:GO. 
+**It aims to lower the chance of hearing damage by significantly reducing overall sound exposure.**  
+Uses game state integration. Anti-cheat safe. 
 
   #### This will not get you VAC banned 100%  as it does not hook into the game in any sort of way.
 
@@ -41,6 +43,7 @@ My limited testing so far showed that lowering volume after death can lower expo
 
   ## To be added
   - [x] Flash volume reduction
+  - [ ] Dink (Helmet Headshot) volume reduction
   - [ ] Toggle for the app (On system tray)
 
   ## How to build to .exe
