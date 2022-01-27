@@ -35,6 +35,8 @@
   Its simple, it lowers the volume when it detects a death and returns the volume when you get to freezetime. 
   This effectively means your volume will be low for everything (e.g. Deathmatch) except actual matches (competitive / casual) where there is freezetime.
 
+It is **VAC safe** because it uses game state integration and it only changes the Windows sound mixer settings for CS. So it doesn't touch the game at all.
+
   ## To be added
 
   - [ ] Flash volume reduction
