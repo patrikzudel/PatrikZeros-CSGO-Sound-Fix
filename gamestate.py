@@ -26,3 +26,13 @@ class GameState:
         if health == 0:
             volume.lowVolume()
             #print("Setting volume to low")
+
+    def update_player_flashed(self, flashed):
+        if self.player.state.flashed != flashed:
+            if self.player.state.flashed < flashed:
+                if flashed > 0:
+                    volume.sLowVolume()
+            self.player.state.flashed = flashed
+            if flashed < 200:
+                volume.highVolume()
+                #print("Setting volume to low")

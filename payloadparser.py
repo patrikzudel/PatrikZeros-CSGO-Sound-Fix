@@ -72,6 +72,9 @@ class PayloadParser:
                 if 'helmet' in state_info:
                     gamestate_manager.gamestate.player.state.helmet = state_info['helmet']
                 if 'flashed' in state_info:
+                    flashed = int(state_info['flashed'])
+                    if gamestate_manager.gamestate.player.state.flashed != flashed:
+                        gamestate_manager.gamestate.update_player_flashed(flashed)
                     gamestate_manager.gamestate.player.state.flashed = state_info['flashed']
                 if 'smoked' in state_info:
                     gamestate_manager.gamestate.player.state.smoked = state_info['smoked']
