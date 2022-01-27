@@ -17,7 +17,7 @@
   ## How to autostart with Windows
 ### This is really simple and recommended!
 
-  - Place the program folder where you will not delete it (e.g. C:/)
+  - Place the main folder where you will not delete it (e.g. C:/)
   - Create a shortcut of the executable
   - Press Win + R
   - Type "shell:startup"
