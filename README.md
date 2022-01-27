@@ -1,6 +1,6 @@
 # PatrikZero's CS:GO Volume Fix
 
-Script that lowers volume when you die and get flashed in CS:GO. 
+Script that lowers volume when you die and get flashed in CS:GO.  
 **It aims to lower the chance of hearing damage by significantly reducing overall sound exposure.**  
 Uses game state integration. Anti-cheat safe. 
 
