@@ -9,7 +9,9 @@
   - Download from releases on the right side ->
   - Put "gamestate_integration_VolumeFix.cfg" into your "Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg"
   - Run the .exe
-  - You can also change how much the volume gets lowered by changing the decimal in "volume.txt"
+    - You can also change how much the volume gets lowered by changing the decimal in "volume.txt"
+
+  - To turn it off just right click the icon in the system tray and Quit.
 
   ## How to autostart with Windows
 
