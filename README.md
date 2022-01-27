@@ -15,6 +15,7 @@
   - To turn it off just right click the icon in the system tray and Quit.
 
   ## How to autostart with Windows
+### This is really simple and recommended!
 
   - Place the program folder where you will not delete it (e.g. C:/)
   - Create a shortcut of the executable
