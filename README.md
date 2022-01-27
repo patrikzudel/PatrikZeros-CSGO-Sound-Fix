@@ -1,4 +1,4 @@
-# PatrikZero's CS:GO Volume Fix
+# PatrikZero's CS:GO Hearing protection
 
 Program that lowers volume when you die and get flashed in CS:GO.  
 **It aims to lower the chance of hearing damage by significantly reducing overall sound exposure.**  
