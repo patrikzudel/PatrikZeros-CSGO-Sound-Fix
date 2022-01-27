@@ -40,7 +40,7 @@ My limited testing so far showed that lowering volume after death can lower expo
 
 
   ## To be added
-  - [ ] Flash volume reduction
+  - [x] Flash volume reduction
   - [ ] Toggle for the app (On system tray)
 
   ## How to build to .exe
