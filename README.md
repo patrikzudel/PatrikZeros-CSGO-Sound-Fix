@@ -7,11 +7,11 @@ Uses game state integration. Anti-cheat safe.
   #### This will not get you VAC banned 100%  as it does not hook into the game in any sort of way.
 
   ## Usage
-  - Download from releases on the right side ⇾
+  - Download from [Releases](https://github.com/jannemannX/PatrikZeros-CSGO-Sound-Fix/releases/tag/Release)
   - Chrome / Windows might flag it as a dangerous file because it doesn't know what it is but don't worry, as it is open source you can compile the code for yourself if you don't trust the .exe!
   - Put "gamestate_integration_VolumeFix.cfg" into your "Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg"
   - Run the .exe
-    - You can also change how much the volume gets lowered by changing the decimal in "volume.txt"
+    - In "volume.txt" you can set the value to which the volume should be reduced.
 
   - To turn it off, just right-click the icon in the system tray and quit.
 
