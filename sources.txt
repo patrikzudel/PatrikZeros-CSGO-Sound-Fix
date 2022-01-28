@@ -1,4 +1,4 @@
 https://icons8.com/icon/93369/hearing
 https://github.com/mdhedelund/CSGO-GSI
-https://stackoverflow.com/questions/20828752/python-change-master-application-volume
+https://github.com/AndreMiras/pycaw    // Added functionality in class EditAudioUtilities
 https://stackoverflow.com/questions/9494739/how-to-build-a-systemtray-app-for-windows

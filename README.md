@@ -47,6 +47,7 @@ My limited testing so far showed that lowering volume after death can lower expo
   - [ ] Keyboard toggle to switch between High / Low volume
   - [ ] Dink (Helmet Headshot) volume reduction
   - [ ] Toggle for the app (On system tray)
+  - [x] Support for multiple sound devices (CS:GO on a non-default audio output)
   - [ ] Linux support
 
   ## How to build to .exe
@@ -55,4 +56,4 @@ My limited testing so far showed that lowering volume after death can lower expo
 
 ## Sources
 - In sources.txt
-- Thanks to mdhedelund, Simon Brunning and Mark Hammond.
+- Thanks to mdhedelund, Andre Miras, Simon Brunning and Mark Hammond.
