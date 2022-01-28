@@ -70,9 +70,9 @@ class RequestHandler(BaseHTTPRequestHandler):
 
 
 def SysTrayIconCreate():
-    volFile = open("volume.txt", "r")
-    ivolume = volFile.readline()
-    volFile.close()
+    settingsFile = open("settings.txt", "r")
+    settings = json.loads(settingsFile.read().replace('\n', ''))
+    settingsFile.close()
     icons = itertools.cycle(glob.glob('*.ico'))
     hover_text = "Zero's CSGO Volume Fix"
     def nameroni(sysTrayIcon): pass
@@ -80,7 +80,7 @@ def SysTrayIconCreate():
     def switch_icon(sysTrayIcon):
         sysTrayIcon.icon = next(icons)
         sysTrayIcon.refresh_icon()
-    menu_options = (("PatrikZero's CSGO Volume Fix", next(icons), nameroni), (f"Low volume: {float(ivolume)*100}%", None, nameroni))
+    menu_options = (("PatrikZero's CSGO Volume Fix", next(icons), nameroni), (f"Death volume: {float(settings['deathVolume'])*100}%", None, nameroni), (f"Flash volume: {float(settings['flashVolume'])*100}%", None, nameroni), (f"Bomb expl. volume: {float(settings['bombExplosionVolume'])*100}%", None, nameroni))
     def quitteroni(sysTrayIcon): os._exit(1)
     SysTrayIcon(next(icons), hover_text, menu_options, on_quit=quitteroni, default_menu_index=1)
 
