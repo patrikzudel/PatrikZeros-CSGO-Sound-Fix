@@ -43,6 +43,7 @@ My limited testing so far showed that lowering volume after death can lower expo
 
   ## To be added
   - [x] Flash volume reduction
+  - [ ] Settings for flash volume reduction
   - [ ] Keyboard toggle to switch between High / Low volume
   - [ ] Dink (Helmet Headshot) volume reduction
   - [ ] Toggle for the app (On system tray)
