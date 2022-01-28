@@ -25,7 +25,7 @@ class GameState:
         self.round_bomb = bomb
         if bomb == "exploded":
             #print("Bomb exploded: Setting volume to low")
-            volume.lowVolume()
+            volume.bombVolume()
 
     def update_player_health(self, health):
         if self.player.state.health != health:
@@ -34,17 +34,17 @@ class GameState:
         if health == 0:
             #print("Setting volume to low")
             self.alive = 0
-            volume.lowVolume()
+            volume.deathVolume()
 
     def update_player_flashed(self, flashed):
         if self.player.state.flashed != flashed:
             if self.player.state.flashed < flashed:
                 if flashed > 0:
-                    volume.sLowVolume()
+                    volume.flashVolume()
             self.player.state.flashed = flashed
             if flashed < 200:
                 if self.alive:
                     volume.highVolume()
                 else:
                     #print("Setting volume to low")
-                    volume.lowVolume()
+                    volume.deathVolume()

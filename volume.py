@@ -1,10 +1,10 @@
 import comtypes
-from pycaw.pycaw import AudioUtilities, CLSID_MMDeviceEnumerator, IMMDeviceEnumerator, EDataFlow, ERole
-from pycaw.pycaw import IAudioSessionControl2, IAudioSessionManager2, AudioSession, ISimpleAudioVolume
+from pycaw.pycaw import AudioUtilities, CLSID_MMDeviceEnumerator, IMMDeviceEnumerator, EDataFlow, ERole, IAudioSessionControl2, IAudioSessionManager2, AudioSession, ISimpleAudioVolume
+import json
 
-volFile = open("volume.txt", "r")
-iVolume = volFile.readline()
-volFile.close()
+settingsFile = open("settings.txt", "r")
+settings = json.loads(settingsFile.read().replace('\n', ''))
+settingsFile.close()
 
 # Edited pycaw to look through all active output devices' sessions not only the Default one
 class EditAudioUtilities(AudioUtilities):
@@ -56,12 +56,16 @@ def changeVolume(vol : float):
                 volume.SetMasterVolume(vol, None)
 
 
-def lowVolume():
-    changeVolume(float(iVolume))
+def deathVolume():
+    changeVolume(float(settings['deathVolume']))
 
 
-def sLowVolume():
-    changeVolume(float(0))
+def bombVolume():
+    changeVolume(float(settings['bombExplosionVolume']))
+
+
+def flashVolume():
+    changeVolume(float(settings['flashVolume']))
 
 
 def highVolume():
