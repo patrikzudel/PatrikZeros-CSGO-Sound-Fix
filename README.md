@@ -47,6 +47,7 @@ My limited testing so far showed that lowering volume after death can lower expo
   - [ ] Keyboard toggle to switch between High / Low volume
   - [ ] Dink (Helmet Headshot) volume reduction
   - [ ] Toggle for the app (On system tray)
+  - [ ] Linux support
 
   ## How to build to .exe
   - pip install pyinstaller
