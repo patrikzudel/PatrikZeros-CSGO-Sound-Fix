@@ -7,7 +7,7 @@ Uses game state integration. Anti-cheat safe.
   #### This will not get you VAC banned 100%  as it does not hook into the game in any sort of way.
 
   ## Usage
-  - Download from [Releases](https://github.com/jannemannX/PatrikZeros-CSGO-Sound-Fix/releases/tag/Release)
+  - Download from [Releases](https://github.com/patrikzudel/PatrikZeros-CSGO-Sound-Fix/releases/)
   - Chrome / Windows might flag it as a dangerous file because it doesn't know what it is but don't worry, as it is open source you can compile the code for yourself if you don't trust the `.exe`!
   - Put `gamestate_integration_VolumeFix.cfg` into your `Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg`
   - Run the .exe
