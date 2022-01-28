@@ -11,6 +11,10 @@ class PayloadParser:
             if payload['round']['phase'] != 'live' and not roundchanged:
                 return None
 
+        if 'round' in payload and 'bomb' in payload['round']:
+            if payload['round']['bomb'] != gamestate_manager.gamestate.round_bomb:
+                gamestate_manager.gamestate.update_round_bomb(payload['round']['bomb'])
+
         # Parse map information
         if 'map' in payload:
             map_info = payload['map']
