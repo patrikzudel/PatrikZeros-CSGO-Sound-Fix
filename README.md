@@ -8,23 +8,36 @@ Uses game state integration. Anti-cheat safe.
 
   ## Usage
   - Download from releases on the right side ->
-  - Chrome / Windows might flag it as a dangerous file because it doesn't know what it is but don't worry, as it is open source you can compile the code for yourself if you don't trust the .exe!
-  - Put "gamestate_integration_VolumeFix.cfg" into your "Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg"
+  - Chrome / Windows might flag it as a dangerous file because it doesn't know what it is but don't worry, as it is open source you can compile the code for yourself if you don't trust the `.exe`!
+  - Put `gamestate_integration_VolumeFix.cfg` into your `Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg`
   - Run the .exe
-    - You can also change how much the volume gets lowered by changing the decimal in "volume.txt"
+    - You can also change settings in `settings.txt`. If you want to disable a feature just put the value to `1.00`. 
+    - For example `"flashVolume": 1.00` would not change the game volume when flashed. `"flashVolume": 0.50` will put the volume to 50% when flashed.
+  - To turn it off just right click the icon in the system tray and `Quit`.
+    - Right clicking the system tray icon also shows current settings.
 
-  - To turn it off just right click the icon in the system tray and Quit.
 
   ## How to autostart with Windows
 ### This is really simple and recommended!
 
-  - Place the main folder where you will not delete it (e.g. C:/)
-  - Create a shortcut of the executable
-  - Press Win + R
-  - Type "shell:startup"
-  -  Place the shortcut in the "Startup" folder that opens up
+  - **Place the main folder where you will not delete it (e.g. `C:/` or `Documents`)**
+  - Open `Start with windows.bat`
+  - Its done!
 
-  ## How it works
+## Features
+- Adjustable volume reduction (settings.txt)
+  - When you die
+  - When you get flashed (High pitched flash noise)
+  - When bomb explodes
+  
+- System tray icon which shows settings
+
+- Easy way to autostart with Windows
+
+
+
+## How it works
+
 Its simple, it lowers the csgo.exe volume when it detects a death and returns the volume when you get to freezetime. 
 This effectively means your volume will be low for everything (e.g. Deathmatch) except actual matches (competitive / casual) where there is freezetime. **It also mutes the game when you get flashed** so you don't hear the **horrible high pitched noise**. (It only mutes it for the same duration as the game does so no disadvantage)
 
@@ -43,7 +56,9 @@ My limited testing so far showed that lowering volume after death can lower expo
 
   ## To be added
   - [x] Flash volume reduction
-  - [ ] Settings for flash volume reduction
+  - [x] Bomb volume reduction
+  - [x] Settings for flash volume reduction
+  - [x] Easy way to start with Windows
   - [ ] Keyboard toggle to switch between High / Low volume
   - [ ] Dink (Helmet Headshot) volume reduction
   - [ ] Toggle for the app (On system tray)
@@ -51,9 +66,9 @@ My limited testing so far showed that lowering volume after death can lower expo
   - [ ] Linux support
 
   ## How to build to .exe
-  - pip install pyinstaller
-  - pyinstaller --onefile --noconsole --icon Icon.ico --name "PatrikZeros CSGO Sound Fix" main.py
+  - `pip install pyinstaller`
+  - `pyinstaller --onefile --noconsole --icon Icon.ico --name "PatrikZeros CSGO Sound Fix" main.py`
 
 ## Sources
-- In sources.txt
+- In `sources.txt`
 - Thanks to mdhedelund, Andre Miras, Simon Brunning and Mark Hammond.
