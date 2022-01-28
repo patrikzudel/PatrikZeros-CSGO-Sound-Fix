@@ -11,7 +11,7 @@ Uses game state integration. Anti-cheat safe.
   - Chrome / Windows might flag it as a dangerous file because it doesn't know what it is but don't worry, as it is open source you can compile the code for yourself if you don't trust the .exe!
   - Put "gamestate_integration_VolumeFix.cfg" into your "Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg"
   - Run the .exe
-    - In "volume.txt" you can set the value to which the volume should be reduced.
+    - In "volume.txt" you can also set the value to which the volume should be reduced.
 
   - To turn it off, just right-click the icon in the system tray and quit.
 
