@@ -2,6 +2,6 @@
 __pycache__/*
 build/*
 venv/*
-dist/Release.zip
+dist/Releases/*
 PatrikZeros CSGO Sound Fix.spec
 sandbox/*
