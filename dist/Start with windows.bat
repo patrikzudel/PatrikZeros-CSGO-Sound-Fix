@@ -11,6 +11,7 @@ echo Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
 echo sLinkFile = "%USERPROFILE%\Start Menu\Programs\Startup\PatrikZeros CSGO Sound Fix.lnk" >> %SCRIPT%
 echo Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
 echo oLink.TargetPath = "%cd%\PatrikZeros CSGO Sound Fix.exe" >> %SCRIPT%
+echo oLink.WorkingDirectory = "%cd%" >> %SCRIPT%
 echo oLink.Save >> %SCRIPT%
 
 cscript /nologo %SCRIPT%
