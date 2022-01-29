@@ -34,8 +34,6 @@ Uses game state integration. Anti-cheat safe.
 
 - Easy way to autostart with Windows
 
-
-
 ## 📖 How it works
 
 Its simple, it lowers the csgo.exe volume when it detects a death and returns the volume when you get to freezetime. 
@@ -78,3 +76,7 @@ My limited testing so far showed that lowering volume after death can lower expo
 ## 📃 Sources
 - In `sources.txt`
 - Thanks to mdhedelund, Andre Miras, Simon Brunning and Mark Hammond.
+
+---
+
+💻❤🍲 by [Patrik Žúdel](https://twitter.com/PatrikZero)
