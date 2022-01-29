@@ -1,1 +1,3 @@
+comtypes
+pypiwin32
 pycaw
