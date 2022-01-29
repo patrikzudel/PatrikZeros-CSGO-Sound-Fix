@@ -8,11 +8,11 @@ Uses game state integration. Anti-cheat safe.
 
   ## Usage
   - Download from [Releases](https://github.com/patrikzudel/PatrikZeros-CSGO-Sound-Fix/releases/)
-  - Chrome / Windows might flag it as a dangerous file because it doesn't know what it is but don't worry, as it is open source you can compile the code for yourself if you don't trust the `.exe`!
+  - Chrome might flag it as a dangerous file because it doesn't know what it is but don't worry, as it is open source you can compile the code for yourself if you don't trust the `.exe`!
   - Put `gamestate_integration_VolumeFix.cfg` into your `Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg`
   - Run the .exe
     - You can also change settings in `settings.txt`. If you want to disable a feature just put the value to `1.00`. 
-    - For example `"flashVolume": 1.00` would not change the game volume when flashed. `"flashVolume": 0.50` will put the volume to 50% when flashed.
+    - For example `"flashVolume": 1.00` would not change the game volume when flashed. `"flashVolume": 0.30` will set the volume to 30% when flashed.
   - To turn it off just right click the icon in the system tray and `Quit`.
     - Right clicking the system tray icon also shows current settings.
 
