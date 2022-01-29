@@ -1,4 +1,4 @@
-# PatrikZero's CS:GO Hearing protection
+![](Logo.png)
 
 Program that lowers volume when you die and get flashed in CS:GO.  
 **It aims to lower the chance of hearing damage by significantly reducing overall sound exposure.**  
@@ -8,7 +8,7 @@ Uses game state integration. Anti-cheat safe.
 
   ## 📖 Usage
   - Download from [Releases](https://github.com/patrikzudel/PatrikZeros-CSGO-Sound-Fix/releases/)
-  - Chrome might flag it as a dangerous file because it doesn't know what it is but don't worry, as it is open source you can compile the code for yourself if you don't trust the `.exe`!
+  - Chrome / Windows defender might flag it as a dangerous file because it doesn't know what it is but don't worry, as it is open source you can compile the code for yourself if you don't trust the `.exe`!
   - Put `gamestate_integration_VolumeFix.cfg` into your `Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg`
   - Run the .exe
     - You can also change settings in `settings.txt`. If you want to disable a feature just put the value to `1.00`. 
