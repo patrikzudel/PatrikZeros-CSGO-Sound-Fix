@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/patrikzudel/PatrikZeros-CSGO-Sound-Fix/main/LogoLight.png?sanitize=true#gh-dark-mode-only" alt="Logo"><img src="https://raw.githubusercontent.com/patrikzudel/PatrikZeros-CSGO-Sound-Fix/main/LogoDark.png?sanitize=true#gh-light-mode-only" alt="Logo">
 
-Program that lowers volume when you die and get flashed in CS:GO.  
+Program that lowers volume when you are not alive and get flashed in CS:GO.  
 **It aims to lower the chance of hearing damage and fatigue by significantly reducing overall sound exposure.**  
 Uses game state integration. Anti-cheat safe. 
 
