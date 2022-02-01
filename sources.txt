@@ -2,3 +2,6 @@ https://icons8.com/icon/93369/hearing
 https://github.com/mdhedelund/CSGO-GSI
 https://github.com/AndreMiras/pycaw    // Added functionality in class EditAudioUtilities
 https://stackoverflow.com/questions/9494739/how-to-build-a-systemtray-app-for-windows
+
+// Source about noise exposure
+https://apps.who.int/iris/bitstream/handle/10665/39458/9241540729-eng.pdf
