@@ -56,8 +56,9 @@ My limited testing so far showed that lowering volume after death can lower expo
 
 ## 🍀 Supporters
 
-**[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/patrikzero)**
-> If you like this project and would like to support me, feel free to buy me a coffee! ☕☕☕
+**[!["Buy Me A Ramen"](https://raw.githubusercontent.com/patrikzudel/patrikzudel/main/ramen.png)](https://www.buymeacoffee.com/patrikzero)**
+
+> If you like this project and would like to support me, feel free to buy me a ramen! 🍜🍜🍜
 
   ## 📋 To be added
 
