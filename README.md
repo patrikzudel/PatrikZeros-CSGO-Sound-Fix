@@ -26,6 +26,8 @@ Uses game state integration. Anti-cheat safe.
   - **Place the main folder where you will not delete it (e.g. `C:/` or `Documents`)**
   - Open `Start with windows.bat`
   - Its done!
+    - To remove it from autostart visit [here](https://github.com/patrikzudel/PatrikZeros-CSGO-Sound-Fix/wiki/%F0%9F%92%BE-How-to-remove-from-Windows-autostart)
+
 
 ## ⚡ Features
 - Adjustable volume reduction (settings.txt)
