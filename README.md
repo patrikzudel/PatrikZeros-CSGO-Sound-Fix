@@ -64,16 +64,16 @@ My limited testing so far showed that lowering volume after death can lower expo
 
   ## 📋 To be added
 
+  - [ ] Better flash volume reduction (That doesn't give a competitive disadvantage)
+  - [ ] Keyboard toggle to switch back to High volume
+  - [ ] Dink (Helmet Headshot) volume reduction
+  - [ ] Linux support
   - [x] Flash volume reduction
   - [x] Bomb volume reduction
   - [x] Settings for flash volume reduction
   - [x] Easy way to start with Windows
   - [x] Fix antiviruses flagging it as a virus
-  - [ ] Keyboard toggle to switch between High / Low volume
-  - [ ] Dink (Helmet Headshot) volume reduction
-  - [ ] Toggle for the app (On system tray)
   - [x] Support for multiple sound devices (CS:GO on a non-default audio output)
-  - [ ] Linux support
 
   ## 📃 How to build to .exe
   - `pip install pyinstaller`
