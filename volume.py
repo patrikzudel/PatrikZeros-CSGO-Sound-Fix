@@ -1,6 +1,7 @@
 import json
 import subprocess
 
+# Function to get all different sinks that is tied to CSGO
 def getSinkIndex(inputs):
     indices = []
     found_index = False
