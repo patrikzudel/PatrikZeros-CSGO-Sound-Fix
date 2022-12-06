@@ -1,75 +1,66 @@
-import comtypes
-from pycaw.pycaw import AudioUtilities, CLSID_MMDeviceEnumerator, IMMDeviceEnumerator, EDataFlow, ERole, IAudioSessionControl2, IAudioSessionManager2, AudioSession, ISimpleAudioVolume
 import json
+import subprocess
+
+# Function to get all different sinks that is tied to CSGO
+def getSinkIndex(inputs):
+    indices = []
+    found_index = False
+    found_csgo = False
+
+    # Split the input string into lines
+    lines = inputs.split('\n')
+    # Loop through the lines
+    for line in lines:
+        if "index:" in line:
+            # If we have already found the csgo line, add the previous index to the list of indices
+            if found_csgo:
+                indices.append(index)
+            # Extract the index value from the line
+            index = line.split(':')[1].strip()
+            # Set the found_index flag to True
+            found_index = True
+            # Reset the found_csgo flag
+            found_csgo = False
+        elif found_index and "csgo_linux64" in line:
+            # If we have already found an index and we have found the csgo line, set the found_csgo flag to True
+            found_csgo = True
+    # Add the last index value to the list of indices if we found the csgo line before reaching the end of the input
+    if found_csgo:
+        indices.append(index)
+    return indices
 
 settingsFile = open("settings.txt", "r")
 settings = json.loads(settingsFile.read().replace('\n', ''))
 settingsFile.close()
-
-# Edited pycaw to look through all active output devices' sessions not only the Default one
-class EditAudioUtilities(AudioUtilities):
-    @staticmethod
-    def GetSpeakers():
-        deviceEnumerator = comtypes.CoCreateInstance(
-            CLSID_MMDeviceEnumerator,
-            IMMDeviceEnumerator,
-            comtypes.CLSCTX_INPROC_SERVER)
-        speakers = deviceEnumerator.EnumAudioEndpoints(EDataFlow.eRender.value, 0x00000001) # ACTIVE_DEVICES = 0x00000001
-        return speakers
-
-    @staticmethod
-    def GetAudioSessionManager(speaker):
-        # win7+ only
-        o = speaker.Activate(
-            IAudioSessionManager2._iid_, comtypes.CLSCTX_ALL, None)
-        mgr = o.QueryInterface(IAudioSessionManager2)
-        return mgr
-
-    @staticmethod
-    def GetAllSessions(mgr):
-        audio_sessions = []
-        if mgr is None:
-            return audio_sessions
-        sessionEnumerator = mgr.GetSessionEnumerator()
-        count = sessionEnumerator.GetCount()
-        for i in range(count):
-            ctl = sessionEnumerator.GetSession(i)
-            if ctl is None:
-                continue
-            ctl2 = ctl.QueryInterface(IAudioSessionControl2)
-            if ctl2 is not None:
-                audio_session = AudioSession(ctl2)
-                audio_sessions.append(audio_session)
-        return audio_sessions
+result = subprocess.run(["pacmd", "list-sink-inputs"], stdout=subprocess.PIPE)
+output = result.stdout.decode("utf-8")
+indexes = getSinkIndex(output)
 
 
-def changeVolume(vol : float):
-    speakers = EditAudioUtilities.GetSpeakers()
-    count = speakers.GetCount()
-    for i in range(count):
-        speaker = speakers.Item(i)
-        mgr = EditAudioUtilities.GetAudioSessionManager(speaker)
-        sessions = EditAudioUtilities.GetAllSessions(mgr)
-        for session in sessions:
-            volume = session._ctl.QueryInterface(ISimpleAudioVolume)
-            if session.Process and session.Process.name() == "csgo.exe":
-                volume.SetMasterVolume(vol, None)
 
+def changeVolume(vol : float, index : str):
+    subprocess.run(["pacmd", "set-sink-input-volume", index, str(int(
+        vol*65536))])
+    
 
 def deathVolume():
-    changeVolume(float(settings['deathVolume']))
+    for index in indexes:
+        changeVolume(float(settings['deathVolume']), index)
 
 
 def bombVolume():
-    changeVolume(float(settings['bombExplosionVolume']))
+    for index in indexes:
+        changeVolume(float(settings['bombExplosionVolume']), index)
 
 
 def flashVolume():
-    changeVolume(float(settings['flashVolume']))
+    for index in indexes:
+        changeVolume(float(settings['flashVolume']), index)
 
 
 def highVolume():
-    changeVolume(float(1))
+    for index in indexes:
+        changeVolume(float(1), index)
 
 
 if __name__ == "__main__":
