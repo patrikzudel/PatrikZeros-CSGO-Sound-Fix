@@ -1,14 +1,9 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
-import time
 import json
 import payloadparser
 import gamestate
 import provider
-import itertools, glob
-import threading
-import os
 
-from SysTrayIcon import SysTrayIcon
 
 class GSIServer(HTTPServer):
     def __init__(self, server_address, token, RequestHandler):
@@ -66,27 +61,6 @@ class RequestHandler(BaseHTTPRequestHandler):
         Prevents requests from printing into the console
         """
         return
-
-
-
-def SysTrayIconCreate():
-    settingsFile = open("settings.txt", "r")
-    settings = json.loads(settingsFile.read().replace('\n', ''))
-    settingsFile.close()
-    icons = itertools.cycle(glob.glob('*.ico'))
-    hover_text = "Zero's CSGO Volume Fix"
-    def nameroni(sysTrayIcon): pass
-    def toggleFunc(sysTrayIcon): pass
-    def switch_icon(sysTrayIcon):
-        sysTrayIcon.icon = next(icons)
-        sysTrayIcon.refresh_icon()
-    menu_options = (("PatrikZero's CSGO Volume Fix", next(icons), nameroni), (f"Death volume: {float(settings['deathVolume'])*100}%", None, nameroni), (f"Flash volume: {float(settings['flashVolume'])*100}%", None, nameroni), (f"Bomb expl. volume: {float(settings['bombExplosionVolume'])*100}%", None, nameroni))
-    def quitteroni(sysTrayIcon): os._exit(1)
-    SysTrayIcon(next(icons), hover_text, menu_options, on_quit=quitteroni, default_menu_index=1)
-
-
-thSysTray = threading.Thread(target=SysTrayIconCreate)
-thSysTray.start()
 
 server = GSIServer(('localhost', 3202), 'VALVEPLSSPAREMYEARS', RequestHandler)
 

@@ -17,22 +17,18 @@ class GameState:
     def update_round_phase(self, phase):
         self.round_phase = phase
         if phase == "freezetime":
-            #print("Setting volume to high")
             volume.highVolume()
             self.alive = 1
 
     def update_round_bomb(self, bomb):
         self.round_bomb = bomb
         if bomb == "exploded":
-            #print("Bomb exploded: Setting volume to low")
             volume.bombVolume()
 
     def update_player_health(self, health):
         if self.player.state.health != health:
             self.player.state.health = health
-            #print(self.player.state.health)
         if health == 0:
-            #print("Setting volume to low")
             self.alive = 0
             volume.deathVolume()
 
@@ -46,5 +42,4 @@ class GameState:
                 if self.alive:
                     volume.highVolume()
                 else:
-                    #print("Setting volume to low")
                     volume.deathVolume()

@@ -1,5 +1,5 @@
 {
-"deathVolume": 0.20, 
-"bombExplosionVolume": 0.20, 
-"flashVolume": 0.00
+    "deathVolume": 0.5,
+    "bombExplosionVolume": 0.5,
+    "flashVolume": 0.0
 }
