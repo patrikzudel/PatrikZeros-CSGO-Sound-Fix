@@ -59,6 +59,7 @@ def flashVolume():
 
 
 def highVolume():
+    print("high")
     for index in indexes:
         changeVolume(float(1), index)
 
