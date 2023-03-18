@@ -23,14 +23,23 @@ To have the script start automatically when you log in, follow these steps:
 2. Open the file in a text editor and paste the following:
 
     [Desktop Entry]
+
     Type=Application
+
     Exec=python /path/to/main.py
+
     Hidden=false
+
     NoDisplay=false
+
     X-GNOME-Autostart-enabled=true
+
     Name[en_US]=CSGO Sound Fix
+
     Name=CSGO Sound Fix
+
     Comment[en_US]=Automatically start CSGO Sound Fix on login
+    
     Comment=Automatically start CSGO Sound Fix on login
 
 
