@@ -12,7 +12,9 @@ Uses game state integration. Anti-cheat safe.
   ## 📖 How to use
   - Download from [Releases](https://github.com/patrikzudel/PatrikZeros-CSGO-Sound-Fix/releases/)
   - Chrome / Windows defender might flag it as a dangerous file because it doesn't know what it is but don't worry, as it is open source you can compile the code for yourself if you don't trust the `.exe`!
-  - Put `gamestate_integration_VolumeFix.cfg` into your `Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg`
+	- CS2 - Put `gamestate_integration_VolumeFix.cfg` into your `Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg`
+      - MAKE SURE TO PUT IT IN THE \game\csgo\cfg 
+    - CS:GO - Put `gamestate_integration_VolumeFix.cfg` into your `Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg`
   - Run the .exe
     - You can also change settings in `settings.txt`. If you want to disable a feature just put the value to `1.00`. 
     - For example `"flashVolume": 1.00` would not change the game volume when flashed. `"flashVolume": 0.30` will set the volume to 30% when flashed.
@@ -41,7 +43,7 @@ Uses game state integration. Anti-cheat safe.
 
 ## 📖 How it works
 
-Its simple, it lowers the csgo.exe volume when it detects a death and returns the volume when you get to freezetime. 
+Its simple, it lowers the csgo.exe/cs2.exe volume when it detects a death and returns the volume when you get to freezetime. 
 This effectively means your volume will be low for everything (e.g. Deathmatch) except actual matches (competitive / casual) where there is freezetime. **It also mutes the game when you get flashed** so you don't hear the **horrible high pitched noise**. (It only mutes it for the same duration as the game does so no disadvantage)
 
 It is **VAC safe** because it uses game state integration and it only changes the Windows sound mixer settings for CS. So it doesn't touch the game at all. Game state integration is the same thing Steelseries for example uses for their mice to change color when you kill someone etc.
@@ -77,7 +79,8 @@ My limited testing so far showed that lowering volume after death can lower expo
 
   ## 📃 How to build to .exe
   - `pip install pyinstaller`
-  - `pyinstaller --onefile --noconsole --icon Icon.ico --name "PatrikZeros CSGO Sound Fix" main.py`
+  - `pyinstaller --onefile --noconsole --icon Icon.ico --name "PatrikZeros_CS_Sound_Fix" main.py`
+- `pyinstaller --onefile --noconsole --icon settings.ico --name "Settings" Settings.py`
 
 ## 📃 Sources
 - In `sources.txt`

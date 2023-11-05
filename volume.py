@@ -1,5 +1,6 @@
 import comtypes
-from pycaw.pycaw import AudioUtilities, CLSID_MMDeviceEnumerator, IMMDeviceEnumerator, EDataFlow, ERole, IAudioSessionControl2, IAudioSessionManager2, AudioSession, ISimpleAudioVolume
+from pycaw.pycaw import AudioUtilities, IMMDeviceEnumerator, EDataFlow, ERole, IAudioSessionControl2, IAudioSessionManager2, AudioSession, ISimpleAudioVolume
+from pycaw.constants import CLSID_MMDeviceEnumerator
 import json
 
 settingsFile = open("settings.txt", "r")
@@ -52,7 +53,7 @@ def changeVolume(vol : float):
         sessions = EditAudioUtilities.GetAllSessions(mgr)
         for session in sessions:
             volume = session._ctl.QueryInterface(ISimpleAudioVolume)
-            if session.Process and session.Process.name() == "csgo.exe":
+            if session.Process and session.Process.name() in ("csgo.exe", "cs2.exe"):
                 volume.SetMasterVolume(vol, None)
 
 

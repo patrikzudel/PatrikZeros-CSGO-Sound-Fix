@@ -8,9 +8,9 @@ IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
 set SCRIPT="%TEMP%\%RANDOM%-%RANDOM%-%RANDOM%-%RANDOM%.vbs"
 
 echo Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
-echo sLinkFile = "%USERPROFILE%\Start Menu\Programs\Startup\PatrikZeros CSGO Sound Fix.lnk" >> %SCRIPT%
+echo sLinkFile = "%USERPROFILE%\Start Menu\Programs\Startup\PatrikZerosCSSoundFix.lnk" >> %SCRIPT%
 echo Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
-echo oLink.TargetPath = "%cd%\PatrikZeros CSGO Sound Fix.exe" >> %SCRIPT%
+echo oLink.TargetPath = "%cd%\PatrikZeros_CS_Sound_Fix.exe" >> %SCRIPT%
 echo oLink.WorkingDirectory = "%cd%" >> %SCRIPT%
 echo oLink.Save >> %SCRIPT%
 
