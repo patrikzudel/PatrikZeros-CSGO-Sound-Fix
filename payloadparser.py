@@ -62,7 +62,7 @@ class PayloadParser:
             if 'observer_slot' in player_info:
                 gamestate_manager.gamestate.player.observer_slot = player_info['observer_slot']
             if 'activity' in player_info:
-                gamestate_manager.gamestate.player.activity = player_info['activity']
+                gamestate_manager.gamestate.update_player_activity(player_info['activity'])
 
             if 'state' in player_info:
                 state_info = player_info['state']

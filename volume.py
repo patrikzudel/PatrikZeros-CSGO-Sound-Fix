@@ -3,6 +3,7 @@ from pycaw.pycaw import AudioUtilities, IMMDeviceEnumerator, EDataFlow, ERole, I
 from pycaw.constants import CLSID_MMDeviceEnumerator
 import json
 
+currentVolume = 1.0
 settingsFile = open("settings.txt", "r")
 settings = json.loads(settingsFile.read().replace('\n', ''))
 settingsFile.close()
@@ -45,6 +46,10 @@ class EditAudioUtilities(AudioUtilities):
 
 
 def changeVolume(vol : float):
+    if currentVolume == vol:
+        return
+
+    currentVolume = vol
     speakers = EditAudioUtilities.GetSpeakers()
     count = speakers.GetCount()
     for i in range(count):
