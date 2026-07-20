@@ -46,6 +46,7 @@ class EditAudioUtilities(AudioUtilities):
 
 
 def changeVolume(vol : float):
+    global currentVolume
     if currentVolume == vol:
         return
 
