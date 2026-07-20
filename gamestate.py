@@ -14,6 +14,12 @@ class GameState:
         self.round_bomb = ''
         self.alive = 1
 
+    def update_player_activity(self, activity):
+        if activity == 'menu':
+            # Reset volume after a match ended (to avoid staying in bomb/death volume)
+            volume.highVolume()
+        self.player.activity = activity
+
     def update_round_phase(self, phase):
         self.round_phase = phase
         if phase == "freezetime":
@@ -29,6 +35,10 @@ class GameState:
 
     def update_player_health(self, health):
         if self.player.state.health != health:
+            if self.player.state.health == 0 and health == 100:
+                # Reset volume on respawn (handles some edge cases, eg. after warmup)
+                volume.highVolume()
+                self.alive = 1
             self.player.state.health = health
             #print(self.player.state.health)
         if health == 0:
